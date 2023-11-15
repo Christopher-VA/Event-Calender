@@ -5,6 +5,7 @@ $(function () {
   var date = dayjs().format('dddd, MMMM D YYYY, h:mm:ss a');
   var calander = $('.container');
   var currentDay = $('#currentDay');
+  var saveBtn = document.getElementsByClassName('saveBtn'); // need to make this a Jquery
   currentDay.text(date);
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
@@ -29,8 +30,21 @@ $(function () {
   console.log(hourCurrent);
   console.log(calander.parent());
 
+  for (let i = 0; i < saveBtn.length; i++) {
+    saveBtn[i].addEventListener('click', function() {
+      console.log('yay' + i);
+      var input = $(".description");
+      console.log(input[i]);
+      // localStorage.setItem(".container", input.value);
+      // var storedValue = localStorage.getItem(".container");
+    })
+}  
+  
+  // saveBtn.addEventListener('click', localStorage)
+
   var timeColorUpdate = function(){
     
   }
+
   timeColorUpdate();
 });
