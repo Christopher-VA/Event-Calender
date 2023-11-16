@@ -49,5 +49,6 @@ appear as green to show time left in the day.
 
 ## Links
 ```md
-
+Website: [Link text](https://christopher-va.github.io/Event-Calender/)
+Github: [Link text](https://github.com/Christopher-VA/Event-Calender)
 ```
